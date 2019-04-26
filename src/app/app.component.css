@@ -1,0 +1,88 @@
+.main {
+    display: flex;
+    flex-flow: row nowrap;
+    min-width: 640px;
+    min-height: auto;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to top, #5ee7df, #66a6ff);
+}
+
+.main__container {
+    display: flex;
+    width: 70%;
+    height: 80%;
+}
+
+.main__container_left_card {
+    flex: 1;
+
+    background: white;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.main__container_left_card-form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__container_left_card-form > h2 {
+    margin: 5rem 0 7rem 0;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    font-size: 2.5rem;
+    color: #0c1066;
+    /* -webkit-animation: fadein 1.75s ease-in-out;
+    animation: fadein 1.75s ease-in-out; */
+}
+
+.main__container_left_card-form > input {
+    border-radius: 2rem;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 255, 0.3);
+    outline: none;
+    border: none;
+    width: 80%;
+}
+
+.main__container_left_card-form > #submit {
+    border-radius: 2rem;
+    width: 50%;
+    color: white;
+    padding: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
+    margin-top: 1.5em;
+    letter-spacing: 0.1rem;
+}
+
+.main__container_left_card-form-footer {
+    margin-top: 2rem;
+}
+
+.main__container_left_card-form-footer > a {
+    color: #ff3a82;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 1rem;
+}
+
+.main__container_right_card {
+    flex: 2;
+
+    background-image: url("../assets/img/asphalt-curve-dark-775199.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
