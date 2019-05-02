@@ -1,74 +1,84 @@
 .main {
     display: flex;
-    flex-flow: row nowrap;
-    min-width: 640px;
-    min-height: auto;
-    height: 100vh;
-    width: 100vw;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to top, #5ee7df, #66a6ff);
+    flex-flow: column;
+    min-height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to top, #5ee7df 0%, #66a6ff 100%);
 }
 
 .main__container {
+    position: relative;
     display: flex;
-    width: 70%;
-    height: 80%;
+    width: 76.5%;
+    min-height: 80vh;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    -webkit-animation: fadein 1s ease-in-out;
+    animation: fadein 1s ease-in-out;
 }
 
 .main__container_left_card {
-    flex: 1;
-
+    display: flex;
+    flex: 2 2;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     background: white;
+    min-height: 100%;
+    border-radius: 10px 0 0 10px;
+}
 
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+.main__container_left_card-title {
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    font-size: 2.5rem;
+    color: #0c1066;
+    position: absolute;
+    top: 2.9rem;
+    -webkit-animation: fadein 1.75s ease-in-out;
+    animation: fadein 1.75s ease-in-out;
 }
 
 .main__container_left_card-form {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: center;
+    width: 85%;
+    -webkit-animation: slidedown 2s ease-in-out;
+    animation: slidedown 2s ease-in-out;
 }
 
-.main__container_left_card-form > h2 {
-    margin: 5rem 0 7rem 0;
-    font-weight: bold;
-    letter-spacing: 0.25rem;
-    font-size: 2.5rem;
-    color: #0c1066;
-    /* -webkit-animation: fadein 1.75s ease-in-out;
-    animation: fadein 1.75s ease-in-out; */
-}
-
-.main__container_left_card-form > input {
+.main__container_left_card-form_inputs {
     border-radius: 2rem;
-    margin: 1rem 0;
-    padding: 1.5rem;
+    padding: 1.6rem;
     box-shadow: 0 0 2rem rgba(0, 0, 255, 0.3);
     outline: none;
     border: none;
-    width: 80%;
+    width: 85%;
+    margin: 0.5rem 0;
 }
 
 .main__container_left_card-form > #submit {
+    margin-top: 2rem;
     border-radius: 2rem;
-    width: 50%;
+    width: 47.5%;
     color: white;
     padding: 1rem;
     font-size: 1.1rem;
     cursor: pointer;
     box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
-    margin-top: 1.5em;
-    letter-spacing: 0.1rem;
+    outline: none;
+    border: none;
+    background-color: lightgray;
 }
 
-.main__container_left_card-form-footer {
-    margin-top: 2rem;
+.main__container_left_card-footer {
+    margin-top: 3rem;
 }
 
-.main__container_left_card-form-footer > a {
+.main__container_left_card-footer > a {
     color: #ff3a82;
     text-decoration: none;
     text-transform: uppercase;
@@ -76,13 +86,49 @@
 }
 
 .main__container_right_card {
-    flex: 2;
-
+    display: flex;
+    flex: 3 3;
+    justify-content: flex-end;
+    flex-flow: column;
     background-image: url("../../assets/img/asphalt-curve-dark-775199.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
+    border-radius: 0 10px 10px 0;
+}
 
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+.main__container_right_card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 0 10px 10px 0;
+    height: 100%;
+    width: 100%;
+}
+
+.main__container_right_card-greeting {
+    color: white;
+    letter-spacing: 0.03rem;
+    margin: 0 0 2rem 3rem;
+    font-size: 2.75rem;
+    position: relative;
+    z-index: 5;
+    font-weight: bold;
+    -webkit-animation: slideright 2s ease-out;
+    animation: slideright 2s ease-out;
+}
+
+.main__container_right_card-line {
+    background-color: white;
+    width: 8rem;
+    height: 0.5rem;
+    border: none;
+    outline: none;
+    position: relative;
+    z-index: 5;
+    margin: 0 0 8rem 3rem;
+    -webkit-animation: slideright 4s ease-out;
+    animation: slideright 4s ease-out;
 }

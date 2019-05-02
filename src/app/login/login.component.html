@@ -1,19 +1,20 @@
 <div class="main">
   <div class="main__container">
     <div class="main__container_left_card">
+      <h2 class="main__container_left_card-title">Login</h2>
       <form class="main__container_left_card-form">
-        <h2>Login</h2>
-        <input type="text" name="email" placeholder="Email"><br>
-        <input type="password" name="pass" placeholder="Password">
+        <input class="main__container_left_card-form_inputs" type="text" name="email" placeholder="Email"><br>
+        <input class="main__container_left_card-form_inputs" type="password" name="pass" placeholder="Password">
         <input id="submit" type="button" value="Login" type="submit">
-        <footer class="main__container_left_card-form-footer">
-          <span>Don't have an account?</span><a href="">SIGN UP</a>
-        </footer>
       </form>
+      <footer class="main__container_left_card-footer">
+        <span>Don't have an account?</span><a href="">SIGN UP</a>
+      </footer>
     </div>
     <div class="main__container_right_card">
-      <span>Welcome Back!</span>
-      <span>css-line</span>
+      <div class="main__container_right_card-overlay"></div>
+      <span class="main__container_right_card-greeting">Welcome Back!</span>
+      <hr class="main__container_right_card-line">
     </div>
   </div>
 </div>
