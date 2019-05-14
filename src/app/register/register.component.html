@@ -1,0 +1,40 @@
+<div class="main">
+  <div class="main__container">
+    <div class="main__container_left_card">
+      <h2 class="main__container_left_card-title">Sign Up</h2>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="main__container_left_card-form">
+        <input name="email" id="email" ngModel [email]="true" class="main__container_left_card-form_inputs" type="email" formControlName="email" required placeholder="Email">
+        <div *ngIf="controls.email.invalid && (controls.email.dirty || controls.email.touched)" class="alert alert-info">
+            <div *ngIf="controls.email.errors.required">
+              Email is required.
+            </div>
+            <div *ngIf="controls.email.errors && !controls.email.errors.required">
+              Non valid email format.
+            </div>
+        </div>
+        <br>
+        <input name="password" id="password" class="main__container_left_card-form_inputs" type="password" formControlName="password" required placeholder="Password">
+        <div *ngIf="controls.password.invalid && (controls.password.dirty || controls.password.touched)" class="alert alert-danger">
+          <div *ngIf="controls.password.errors.required">
+            Password is required.
+          </div>
+          <div *ngIf="controls.password.errors.minlength">
+            Password must be at least 4 characters long.
+          </div>
+          <div *ngIf="controls.password.errors.forbiddenValue">
+            Password cannot be that simple!
+          </div>
+        </div>
+        <input (mouseover)="hover=true" (mouseleave)="hover=false" [ngStyle]="{'background-color':controls.password.errors === null ? '#00ff9b' : 'lightgray' }" [ngClass]="{'valid-button': (hover == true && controls.password.errors === null && controls.email.errors === null)}" id="submit" type="button" value="Sign Up" type="submit">
+      </form>
+      <footer class="main__container_left_card-footer">
+        <span>Already have an account?</span><a [routerLink]="['/login']">LOG IN</a>
+      </footer>
+    </div>
+    <div class="main__container_right_card">
+      <div class="main__container_right_card-overlay"></div>
+      <span class="main__container_right_card-greeting">Practice weather app using Angular</span>
+      <hr class="main__container_right_card-line">
+    </div>
+  </div>
+</div>
