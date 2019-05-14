@@ -1,38 +1,19 @@
-.navbar {
-    display: flex;
-    flex-flow: row nowrap;
-    min-height: 4rem;
-    width: 100vw;
-    align-items: center;
-    justify-content: space-between;
-    background-color: lightgray;
-}
-
-.navbar__left {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.navbar__left-sidebar_hamburger > svg {
-    margin: 0 1rem;
-    cursor: pointer;
-    /* height: 40px;
-    width: 30px; */
-    padding: 0.9375rem;
-}
-
-.navbar__left-sidebar-icon > svg {
+.navbar__left-menu {
     margin-right: 1rem;
+    font-size: 30px;
 }
 
-.navbar__left-brand > p{
+.navbar__left-icon {
+    display: flex;
+}
+
+.navbar__left-brand > p {
     color: #2B244D;
     font-family: "SegoeUI-Semibold", "Segoe UI", sans-serif;
     font-size: 1.15rem;
     font-weight: 600;
     letter-spacing: 0.1rem;
+    margin-left: 2rem;
 }
 
 .navbar__middle > h3 {
@@ -41,8 +22,19 @@
 }
 
 .navbar__right {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    margin-right: 3rem;
+    margin-right: 1rem;
+}
+
+
+.navbar__right_indicators {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.navbar__right_indicators:nth-child(1) {
+    margin-right: 0.75rem;
+}
+.navbar__right_indicators:nth-last-child(1) {
+    margin-left: 0.75rem;
 }

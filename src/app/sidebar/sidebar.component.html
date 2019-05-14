@@ -1,3 +1,32 @@
-<p>
-  sidebar works!
-</p>
+<div class="container" fxFill fxLayout="column" fxLayoutGap="12px">
+
+    <header class="sidebar" fxFlex="27.5" fxLayout="column" >
+
+        <section class="sidebar__header" fxLayout="row" fxLayoutGap="11rem">
+            <div fxFlex="2" fxLayoutAlign="start center" >
+                <button class="sidebar__header-slider" mat-icon-button (click)="emitSidebarCall()">
+                    <mat-icon [inline]="true" aria-label="Close sidebar">menu</mat-icon>
+                </button>
+            </div>
+            <div class="sidebar__header-greetings">
+                <h2> welcome back </h2>
+            </div>
+        </section>
+
+        <section class="sidebar__content" fxLayout="row wrap" fxLayoutAlign="start center">
+            <div class="sidebar__content-avatar">
+                <img src="../../assets/img/generic-user-purple.png" alt="user's avatar">
+            </div>
+            <section class="sidebar__content_info">
+                <span class="sidebar__content_info-email">placeholder@email.com</span><br>
+                <span class="sidebar__content_info-plan">placeholder: Plan</span>
+            </section>
+        </section>
+
+    </header>
+
+    <main fxFlex>
+        <div style="background-color:lightblue;">s</div>
+    </main>
+
+</div>

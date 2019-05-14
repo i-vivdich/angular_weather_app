@@ -3,9 +3,11 @@
     <div class="main__container_left_card">
       <h2 class="main__container_left_card-title">Login</h2>
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="main__container_left_card-form">
-        <input class="main__container_left_card-form_inputs" type="text" formControlName="email" [ngClass]="{ 'is-invalid': submitted && controls.email.errors }" placeholder="Email"><br>
-        <input class="main__container_left_card-form_inputs" type="password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && controls.password.errors }" placeholder="Password">
-        <input [disabled]="loading" id="submit" type="button" value="Login" type="submit">
+        <input class="main__container_left_card-form_inputs" type="email" formControlName="email" placeholder="Email"><br>
+        <input class="main__container_left_card-form_inputs" type="password" formControlName="password" placeholder="Password">
+        <input (mouseover)="hover=true" (mouseleave)="hover=false"  [ngStyle]="{'background-color': controls.password.errors === null && controls.email.errors === null ? '#00ff9b' : 'lightgray'}"
+        [ngClass]="{'valid-button': (hover == true && controls.password.errors === null && controls.email.errors === null)}"
+        id="submit" type="button" id="submit" type="button" value="Login" type="submit">
       </form>
       <footer class="main__container_left_card-footer">
         <span>Don't have an account?</span><a [routerLink]="['/register']">SIGN UP</a>

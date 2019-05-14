@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { LoginComponent } from './login/login.component';
 import { AppComponent } from './app.component';
@@ -7,10 +8,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
-  // { path: '', component: AppComponent, canActivate: [AuthGuard] },
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent},
-  { path: 'header', component: HeaderComponent },
 
   { path: '**', redirectTo: '' } // temporary
 ];

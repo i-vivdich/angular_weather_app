@@ -60,6 +60,15 @@
     margin: 0.5rem 0;
 }
 
+.valid-button {
+    background: linear-gradient(to right, #03a9f4, #00ff9b);
+}
+
+.main__container_left_card-form_inputs::placeholder {
+    color: #39437a;
+    font-size: 0.9rem;
+}
+
 .main__container_left_card-form > #submit {
     margin-top: 2rem;
     border-radius: 2rem;
@@ -131,4 +140,25 @@
     margin: 0 0 8rem 3rem;
     -webkit-animation: slideright 4s ease-out;
     animation: slideright 4s ease-out;
+}
+
+@media all and (max-width: 1023px) {
+    .main__container_right_card {
+        display: none;
+    }
+    .main__container_left_card {
+        border-radius: 10px;
+    }
+}
+
+@media all and (max-width: 425px) {
+    .main__container_left_card-footer > a {
+        display: block;
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 0.75rem;
+    }
+    .main__container_left_card-title {
+        top: 1.75rem;
+    }
 }

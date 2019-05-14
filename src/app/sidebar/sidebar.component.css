@@ -1,0 +1,65 @@
+.container {
+    min-width: 26rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 255, 0.2);
+}
+
+.sidebar {
+    background: linear-gradient(to right, #00FF9B, #5f84fb);
+}
+
+.sidebar__header {
+    position: relative;
+}
+
+.sidebar__header-slider {
+    position: relative;
+    font-size: 30px;
+    left: 16px;
+    top: 2.25px;
+}
+
+.sidebar__header-greetings {
+    margin-top: 0.25rem;
+    position: relative;
+    left: -4rem;
+}
+
+.sidebar__header-greetings > h2 {
+    font-size: 1.25rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: white;
+    top: 3px;
+    position: relative;
+}
+
+.sidebar__content {
+    margin-top: 4rem;
+    color: white;
+}
+
+.sidebar__content-avatar {
+    margin-right: 1.5rem;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    overflow: hidden;
+    background-color: white;
+    align-self: center;
+    margin-left: 2.25rem;
+}
+
+.sidebar__content-avatar > img {
+    max-width: 4rem;
+}
+
+.sidebar__content_info-email {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    font-size: 1.15rem;
+}
+
+.sidebar__content_info-plan {
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+}
