@@ -1,11 +1,6 @@
-.sidebar {
+/* .sidebar {
     min-width: 26rem;
     box-shadow: 0 0.5rem 2rem rgba(0, 0, 255, 0.2);
-}
-
-.sidebar__header {
-    background: linear-gradient(to right, #00FF9B, #5f84fb);
-
 }
 
 .sidebar__header_uppersection {
@@ -54,21 +49,6 @@
     max-width: 4rem;
 }
 
-.sidebar__header_content_info-email {
-    display: inline-block;
-    margin-bottom: 0.35rem;
-    font-size: 1.15rem;
-}
-
-.sidebar__header_content-plan {
-    font-size: 0.9rem;
-    letter-spacing: 0.1rem;
-}
-
-.sidebar__menu_links-list {
-    list-style: none;
-}
-
 .sidebar__menu_links-list > li {
     outline: none;
     font-size: 1rem;
@@ -76,16 +56,81 @@
     margin: 0.5rem 0;
     cursor: pointer;
 }
+*/
+
+.sidebar {
+    background-color: #fff;
+    min-width: 26rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 255, 0.2);
+}
+
+.sidebar__header {
+    height: 265px; /* todo convert to rem */
+    background: linear-gradient(to right, #00FF9B, #5f84fb);
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 255, 0.2);
+}
+
+.sidebar__header-menu {
+    height: 64px;
+}
+
+.sidebar__header-menu-title {
+    color: #fff;
+    font-weight: light;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.25rem;
+    letter-spacing: 0.15rem;
+}
+
+.sidebar__user {
+    height: calc(200px - 60px);
+    color: #fff;
+}
+
+.sidebar__user-image {
+    display: block;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.sidebar__user-info {
+    line-height: 1.5em;
+}
+
+.sidebar__user-info-email {
+    font-size: 1.15rem;
+}
+
+.sidebar__user-date {
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+}
+
+.sidebar__main-wrapper {
+    min-height: calc(100vh - (200px + 65px));
+}
+
+.sidebar__navbar {
+    padding-top: 1rem;
+    list-style: none;
+}
+
+.sidebar__navbar-item {
+    outline: none;
+    font-size: 1rem;
+    padding: 1rem 0;
+    margin: 0.75rem 0;
+    cursor: pointer;
+}
+
+.sidebar__navbar-item:hover {
+    cursor: pointer;
+}
 
 .active_link {
     color: #495CFC;
     border-bottom: 1px solid #495CFC;
-}
-
-.sidebar__menu_footer > a {
-    text-decoration: none;
-}
-
-.sidebar__menu_footer > a:hover {
-    cursor: pointer;
 }

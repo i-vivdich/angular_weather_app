@@ -13,9 +13,13 @@ import { map } from 'rxjs/operators';
 })
 export class SidebarComponent implements OnInit {
 
-  private user: User;
-
   @Output() toggled: EventEmitter<any> = new EventEmitter();
+
+  emitSidebarCall() {
+    this.toggled.emit(true);
+  }
+
+  private user: User;
 
   constructor(
     private userService: UserService,
@@ -31,10 +35,6 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
     this.getUserDetails();
-  }
-
-  emitSidebarCall() {
-    this.toggled.emit(true);
   }
 
   getUserDetails() {

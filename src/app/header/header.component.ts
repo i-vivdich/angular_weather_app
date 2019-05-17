@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output} from '@angular/core';
 import { ThemePalette } from '@angular/material';
 
 @Component({
@@ -7,6 +7,7 @@ import { ThemePalette } from '@angular/material';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
   @Output() toggled: EventEmitter<any> = new EventEmitter();
 
   emitSidebarCall() {

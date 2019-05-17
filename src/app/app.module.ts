@@ -23,6 +23,7 @@ import { CitiesComponent } from './cities/cities.component';
 import { AddComponent } from './add/add.component';
 import { CardComponent } from './card/card.component';
 import { TemperatureComponent } from './card/temperature/temperature.component';
+import { HamburgerComponent } from './_components/hamburger/hamburger.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { TemperatureComponent } from './card/temperature/temperature.component';
     CitiesComponent,
     AddComponent,
     CardComponent,
-    TemperatureComponent
+    TemperatureComponent,
+    HamburgerComponent
   ],
   imports: [
     BrowserModule,

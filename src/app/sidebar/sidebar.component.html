@@ -1,4 +1,4 @@
-<aside class="sidebar" fxFill fxLayout="column" fxLayoutGap="12px">
+<!-- <aside class="sidebar" fxFill fxLayout="column" fxLayoutGap="12px">
 
     <header class="sidebar__header" fxFlex="27.5" fxLayout="column" >
         <section class="sidebar__header_uppersection" fxLayout="row" fxLayoutGap="11rem">
@@ -40,4 +40,43 @@
         </a>
     </footer>
 
+</aside> -->
+<aside class="sidebar">
+
+    <header class="sidebar__header">
+        <section fxLayoutAlign="space-between center" fxLayout="row" class="sidebar__header-menu">
+            <app-hamburger style="margin-left:1rem;" (click)="emitSidebarCall()"></app-hamburger>
+            <h2 fxFlex="1 1 0" class="sidebar__header-menu-title">Welcome Back</h2>
+        </section>
+
+        <section fxLayoutAlign="center end" class="sidebar__user">
+            <div fxFlex="1 1 0" fxLayoutAlign="center center"  class="sidebar__user-photo">
+                <img class="sidebar__user-image " src="../../assets/img/generic-user-purple.png" alt="user's avatar">
+            </div>
+            <div fxFlex="2 1 0"  fxLayout="column" class="sidebar__user-info">
+                <div class="sidebar__user-info-email">{{ user.email }}</div>
+                <div class="sidebar__header_content_info-date">{{ user.createdDate | date }}</div>
+            </div>
+        </section>
+
+    </header>
+
+    <main class="sidebar__main-wrapper">
+        <section class="sidebar__main">
+            <ul class="sidebar__navbar">
+                <li class="sidebar__navbar-item"  (click)="emitSidebarCall()" routerLink="/" routerLinkActive="active_link">Home
+                </li>
+                <li class="sidebar__navbar-item" (click)="emitSidebarCall()" routerLinkActive="active_link" routerLink="/add">Add City
+                </li>
+                <li class="sidebar__navbar-item" (click)="emitSidebarCall()" routerLink="/">Log out
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer fxLayoutAlign="center center" class="sidebar__footer">
+        <a href="https://github.com/i-vivdich/angular_weather_app" target="_blank" rel="noopener" rel="noreferrer" alt="github repository">
+            <mat-icon svgIcon="github" aria-label="github repository"></mat-icon>
+        </a>
+    </footer>
 </aside>
