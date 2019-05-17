@@ -1,15 +1,12 @@
-<mat-sidenav-container class="" fullscreen>
+<mat-sidenav-container fullscreen>
 
     <mat-sidenav #sideBar mode="over">
-        <app-sidebar></app-sidebar>
+        <app-sidebar (toggled)="sideBar.toggle()"></app-sidebar>
     </mat-sidenav>
 
     <mat-sidenav-content>
         <app-header (toggled)="sideBar.toggle()"></app-header>
         <router-outlet></router-outlet>
-        <div id="test" style="background-color: lightblue;margin-top: 0px;">
-            <h3>Test after mat-sidenav-container</h3>
-        </div>
     </mat-sidenav-content>
 
 </mat-sidenav-container>

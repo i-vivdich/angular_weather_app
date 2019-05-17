@@ -1,32 +1,43 @@
-<div class="container" fxFill fxLayout="column" fxLayoutGap="12px">
+<aside class="sidebar" fxFill fxLayout="column" fxLayoutGap="12px">
 
-    <header class="sidebar" fxFlex="27.5" fxLayout="column" >
-
-        <section class="sidebar__header" fxLayout="row" fxLayoutGap="11rem">
+    <header class="sidebar__header" fxFlex="27.5" fxLayout="column" >
+        <section class="sidebar__header_uppersection" fxLayout="row" fxLayoutGap="11rem">
             <div fxFlex="2" fxLayoutAlign="start center" >
-                <button class="sidebar__header-slider" mat-icon-button (click)="emitSidebarCall()">
+                <button class="sidebar__header_uppersection-slider" mat-icon-button (click)="emitSidebarCall()">
                     <mat-icon [inline]="true" aria-label="Close sidebar">menu</mat-icon>
                 </button>
             </div>
-            <div class="sidebar__header-greetings">
+            <div class="sidebar__header_uppersection-greetings">
                 <h2> welcome back </h2>
             </div>
         </section>
 
-        <section class="sidebar__content" fxLayout="row wrap" fxLayoutAlign="start center">
-            <div class="sidebar__content-avatar">
+        <section class="sidebar__header_content" fxLayout="row wrap" fxLayoutAlign="start center">
+            <div class="sidebar__header_content-avatar">
                 <img src="../../assets/img/generic-user-purple.png" alt="user's avatar">
             </div>
-            <section class="sidebar__content_info">
-                <span class="sidebar__content_info-email">placeholder@email.com</span><br>
-                <span class="sidebar__content_info-plan">placeholder: Plan</span>
+            <section class="sidebar__header_content_info">
+                <span class="sidebar__header_content_info-email">{{ user.email }}</span><br>
+                <span class="sidebar__header_content_info-plan">{{ user.createdDate | date }}</span>
             </section>
         </section>
-
     </header>
 
-    <main fxFlex>
-        <div style="background-color:lightblue;">s</div>
+    <main fxFlex="45.5" fxLayout="column" class="sidebar__menu">
+        <section class="sidebar__menu_links">
+            <ul fxLayout="column" class="sidebar__menu_links-list">
+                <li (click)="emitSidebarCall()" routerLink="/" routerLinkActive="active_link">Home</li>
+                <li (click)="emitSidebarCall()" routerLink="/add" routerLinkActive="active_link">Add City</li>
+                <li>Log Out</li>
+            </ul>
+        </section>
     </main>
 
-</div>
+    <footer fxFlex fxLayoutAlign="center center" class="sidebar__menu_footer">
+        <a href="https://github.com/i-vivdich/angular_weather_app" target="_blank" rel="noopener" rel="noreferrer" alt="github repository">
+            <mat-icon svgIcon="github" aria-label="github repository">
+            </mat-icon>
+        </a>
+    </footer>
+
+</aside>

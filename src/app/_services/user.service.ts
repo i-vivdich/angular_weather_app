@@ -12,7 +12,7 @@ export class UserService {
     }
 
     getById(id: number) {
-        return this.http.get(`http://localhost:4000/users/${id}`);
+        return this.http.get<User>(`http://localhost:4000/users/${id}`);
     }
 
     register(user: User) {

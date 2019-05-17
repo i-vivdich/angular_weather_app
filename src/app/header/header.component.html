@@ -1,8 +1,8 @@
-<mat-toolbar class="navbar">
+<mat-toolbar class="navbar" style="background-color:lightblue;">
 
     <mat-toolbar-row>
 
-      <section class="navbar__left" fxFlex fxLayout fxLayoutAlign="start center">
+      <section class="navbar__left" fxFlex fxLayoutAlign="start center">
 
         <button class="navbar__left-menu" mat-icon-button (click)="emitSidebarCall()">
           <mat-icon [inline]="true" aria-label="Open sidebar">menu</mat-icon>
@@ -27,11 +27,11 @@
 
       </section>
 
-      <section class="navbar__middle" fxFlex fxLayout fxLayoutAlign="space-around center">
+      <section class="navbar__middle" fxFlex fxLayoutAlign="space-around center">
         <h3>Today</h3>
       </section>
 
-      <section class="navbar__right" fxFlex fxLayout="row" fxLayoutAlign="end center">
+      <section class="navbar__right" fxFlex fxLayoutAlign="end center">
         <span class="navbar__right_indicators">Light</span>
         <mat-slide-toggle color="warn"></mat-slide-toggle>
         <span class="navbar__right_indicators">Dark</span>

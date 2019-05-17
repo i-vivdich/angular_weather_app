@@ -19,6 +19,10 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule, MatNativeDateModule, MatIconModule, MatSidenavModule, MatListModule, MatToolbarModule} from '@angular/material';
+import { CitiesComponent } from './cities/cities.component';
+import { AddComponent } from './add/add.component';
+import { CardComponent } from './card/card.component';
+import { TemperatureComponent } from './card/temperature/temperature.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import {
     LoginComponent,
     RegisterComponent,
     AlertComponent,
-    HomeComponent
+    HomeComponent,
+    CitiesComponent,
+    AddComponent,
+    CardComponent,
+    TemperatureComponent
   ],
   imports: [
     BrowserModule,
